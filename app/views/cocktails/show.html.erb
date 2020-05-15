@@ -1,8 +1,12 @@
+
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1508253730651-e5ace80a7025?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80);">
+  <div class="container">
+    <h1><%= @cocktail.name %></h1>
+  </div>
+</div>
 <div class="container mt-4">
   <div class="row justify-content-center">
     <div class="col-8">
-      <h1><%= @cocktail.name %></h1>
-      <hr>
       <h4>Doses:</h4>
       <ul>
         <% @cocktail.doses.each do |dose| %>
@@ -12,10 +16,11 @@
           </li>
         <% end %>
       </ul>
+    </div>
+    <div class="col-4">
       <%= render "doses/new", cocktail: @cocktail, dose: @dose %>
-
-      <hr>
-      <%= link_to 'Back to cocktail list', cocktails_path, class: 'btn btn-secondary'  %>
     </div>
   </div>
+  <hr>
+  <%= link_to 'Back to cocktail list', cocktails_path, class: 'btn btn-secondary'  %>
 </div>
