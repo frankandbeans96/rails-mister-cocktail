@@ -12,7 +12,9 @@ import 'bootstrap';
 
 import { initSelect2 } from '../components/init_select2';
 
-initSelect2();
+document.addEventListener('turbolinks:load', () => {
+  initSelect2();
+});
 
 
 // Uncomment to copy all static images under ../images to the output folder and reference
