@@ -1,8 +1,12 @@
-<div class="container">
-  <h1>All cocktails</h1>
-  <ul class="list-group">
-    <% @cocktails.each do |cocktail| %>
-      <li class="list-group-item"><%= link_to cocktail.name, cocktail_path(cocktail) %></li>
-    <% end %>
-  </ul>
+<div class="container mt-4">
+  <div class="row">
+    <div class="col-10">
+      <h1>All cocktails</h1>
+      <ul class="list-group">
+        <% @cocktails.each do |cocktail| %>
+          <li class="list-group-item"><%= link_to cocktail.name, cocktail_path(cocktail) %></li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
 </div>

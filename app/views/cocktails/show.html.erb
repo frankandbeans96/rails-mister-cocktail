@@ -1,4 +1,9 @@
-<div class="container">
-  <h1><%= @cocktail.name %></h1>
-  <hr>
+<div class="container mt-4">
+  <div class="row justify-content-center">
+    <div class="col-8">
+      <h1><%= @cocktail.name %></h1>
+      <hr>
+      <%= link_to 'Back to cocktail list', cocktails_path, class: 'btn btn-secondary'  %>
+    </div>
+  </div>
 </div>
